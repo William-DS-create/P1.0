@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Data Science Portfolio — Your Name</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Plotly CDN for the interactive demo -->
+    <script src="https://cdn.plot.ly/plotly-2.24.1.min.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <img id="profilePic" class="avatar" src="assets/profile.svg" alt="Your Name">
+                <div class="brand-text">
+                    <h1>William A. Hall</h1>
+                    <p class="muted">Data Science Student</p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button id="themeToggle" class="btn small">Toggle Theme</button>
+                <a class="btn primary small" href="#contact">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <h2>Hi — I'm <span class="accent">William A. Hall</span></h2>
+                    <p>I study data science and build projects using Python, pandas, scikit-learn, and visualization
+                        tools. I enjoy turning data into actionable insight.</p>
+                    <p class="cta-row">
+                        <a class="btn primary" href="#projects">See Projects</a>
+                        <a class="btn" href="#skills">Skills</a>
+                    </p>
+                </div>
+                <div class="hero-card">
+                    <div class="stat">
+                        <strong>3+</strong>
+                        <small>Projects</small>
+                    </div>
+                    <div class="stat">
+                        <strong>Python</strong>
+                        <small>Primary</small>
+                    </div>
+                    <div class="stat">
+                        <strong>ML</strong>
+                        <small>Learning</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section container">
+            <h3>Skills</h3>
+            <div class="skills-grid">
+                <div class="skill">
+                    <label>Python</label>
+                    <div class="progress"><span data-value="90"></span></div>
+                </div>
+                <div class="skill">
+                    <label>Pandas</label>
+                    <div class="progress"><span data-value="85"></span></div>
+                </div>
+                <div class="skill">
+                    <label>NumPy</label>
+                    <div class="progress"><span data-value="80"></span></div>
+                </div>
+                <div class="skill">
+                    <label>Machine Learning</label>
+                    <div class="progress"><span data-value="65"></span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section container">
+            <div class="section-head">
+                <h3>Projects</h3>
+                <div class="filters">
+                    <button class="filter active" data-filter="all">All</button>
+                    <button class="filter" data-filter="analysis">Analysis</button>
+                    <button class="filter" data-filter="ml">ML</button>
+                    <button class="filter" data-filter="viz">Viz</button>
+                </div>
+            </div>
+
+            <div class="projects-grid">
+                <article class="project" data-tags="analysis viz">
+                    <h4>Sales Dashboard</h4>
+                    <p>Exploratory analysis and interactive dashboard for sales data using pandas and Plotly.</p>
+                    <p class="muted small">Tools: Python, pandas, Plotly</p>
+                </article>
+
+                <article class="project" data-tags="ml">
+                    <h4>Predictive Model</h4>
+                    <p>Built and evaluated classification models for prediction tasks; delivered model evaluation and
+                        feature importance analysis.</p>
+                    <p class="muted small">Tools: scikit-learn, pandas</p>
+                </article>
+
+                <article class="project" data-tags="viz">
+                    <h4>Interactive Visuals</h4>
+                    <p>Created interactive visualizations for exploratory analysis and storytelling with data.</p>
+                    <p class="muted small">Tools: Plotly, matplotlib</p>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="demo" class="section container">
+            <h3>Interactive Demo</h3>
+            <p class="muted">Interactive Plotly chart using a small Liberia HIV/AIDS dataset (see
+                `assets/data/hiv_liberia.csv`).</p>
+            <div id="chart" class="card" style="height:360px;"></div>
+        </section>
+
+        <section id="resume" class="section container">
+            <h3>Resume</h3>
+            <div class="card">
+                <p class="muted">Download a resume placeholder (replace with your real PDF).</p>
+                <p><a class="btn" href="assets/resume.pdf" download>Download Resume (PDF)</a></p>
+            </div>
+        </section>
+
+        <section id="education" class="section container">
+            <h3>Education</h3>
+            <div class="card">
+                <p><strong>B.Sc. in Data Science (in progress)</strong></p>
+                <p class="muted">University — expected 2026</p>
+            </div>
+        </section>
+
+        <section id="contact" class="section container">
+            <h3>Contact</h3>
+            <div class="contact-grid">
+                <form id="contactForm" class="card contact-form">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" required>
+
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn primary">Send Message</button>
+                        <div id="formMsg" class="form-msg" aria-live="polite"></div>
+                    </div>
+                </form>
+
+                <div class="card contact-info">
+                    <h4>Get in touch</h4>
+                    <p class="muted">Replace with your preferred contact details or links to LinkedIn / GitHub.</p>
+                    <p><strong>Email:</strong> <a href="mailto:hallaugustus24@gmail.com">hallaugustus24@gmail.com</a>
+                    </p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/william-ds-create.github.io" target="_blank"
+                            rel="noopener">github.com/william-ds-create.github.io</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p class="muted">© <span id="year"></span> Your Name — Data Science Student</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
